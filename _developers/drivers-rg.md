@@ -1,3 +1,8 @@
+---
+layout: page
+title: Replica Gateway Drivers
+---
+
 Replica Gateway Drivers
 =======================
 
@@ -256,4 +261,3 @@ but with a serialized `SG_messages::Reply` structure that describes the error
 details.  If there were any `syndicate-rg`-related errors, such as a `rg-drver`
 crash or an invalid request, then `syndicate-rg` replies with an HTTP 40x or 50x
 error.
-
