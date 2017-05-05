@@ -16,7 +16,8 @@
       {% endcomment %}
 
       {% assign pages_list = site.users | sort:"url" %}
-      <a class="sidebar-nav-item active" href="{{ site.baseurl }}users">Users</a>
+      {% assign cur_page = site.baseurl | append:"users/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Users</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -28,7 +29,8 @@
       </ul>
 
       {% assign pages_list = site.developers | sort:"url" %}
-      <a class="sidebar-nav-item active" href="{{ site.baseurl }}developers">Developers</a>
+      {% assign cur_page = site.baseurl | append:"developers/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Developers</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -40,7 +42,8 @@
       </ul>
 
       {% assign pages_list = site.administrators | sort:"url" %}
-      <a class="sidebar-nav-item active" href="{{ site.baseurl }}administrators">Administrators</a>
+      {% assign cur_page = site.baseurl | append:"administrators/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Administrators</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
