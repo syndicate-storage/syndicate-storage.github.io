@@ -16,7 +16,7 @@
       {% endcomment %}
 
       {% assign pages_list = site.users | sort:"url" %}
-      Users
+      <a class="sidebar-nav-item active" href="{{ site.baseurl }}users">Users</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -28,7 +28,7 @@
       </ul>
 
       {% assign pages_list = site.developers | sort:"url" %}
-      Developers
+      <a class="sidebar-nav-item active" href="{{ site.baseurl }}developers">Developers</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -39,8 +39,8 @@
       {% endfor %}
       </ul>
 
-      {% assign pages_list = site.operators | sort:"url" %}
-      Operators
+      {% assign pages_list = site.administrators | sort:"url" %}
+      <a class="sidebar-nav-item active" href="{{ site.baseurl }}administrators">Administrators</a>
       <ul>
       {% for node in pages_list %}
         {% if node.title != null %}
