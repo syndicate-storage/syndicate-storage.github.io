@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Replica Gateway Drivers
 ---
 
@@ -28,7 +28,7 @@ one `rg-driver` with the following settings.
 * `rg-driver delete` will be used to delete a chunk from the
   backend storage service.
 * `rg-driver rename` will be used to handle a file-level rename
-  hint from a user gateway when a file gets renamed.  It is is not necessary
+  hint from a user gateway when a file gets renamed.  It is not necessary
   for all storage providers to handle this request (e.g. our iRODS driver needs
   this, but our S3 driver does not).
 * `rg-driver serialize` will be used to make a chunk suitable for

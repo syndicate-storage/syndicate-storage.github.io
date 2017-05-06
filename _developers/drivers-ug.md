@@ -1,4 +1,4 @@
 ---
-layout: page
+layout: post
 title: User Gateway Drivers
 ---
