@@ -19,15 +19,15 @@ Large-scale DNA sequence datasets are publicly accessible.
 | `iMicrobe`   | `imicrobe`  | `imicrobe_anonymous` Anonymous User Gateway | Microbial datasets hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://imicrobe.us/](http://imicrobe.us/) |
 | `iVirus`     | `ivirus`    | `ivirus_anonymous` Anonymous User Gateway | Viral datasets hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://ivirus.us/](http://ivirus.us/) |
 
-### Access a datatset using `syndicatefs`
+### Accessing a datatset using `syndicatefs`
 
-Mounting the `iMicrobe` dataset to a local path `/mnt/imicrobe` using the 
-`syndicatefs` is:
+To mount the `iMicrobe` dataset to a local path `/mnt/imicrobe` using the 
+`syndicatefs`,
 ```
 syndicatefs -u ANONYMOUS -v imicrobe -g imicrobe_anonymous /mnt/imicrobe
 ```
 
-### Access a dataset using a `Docker image`
+### Accessing a dataset using a `Docker image`
 
 **[Docker](https://www.docker.com)** allows rapid deployment of software packages.
 It also can be used in deployment of datasets.
