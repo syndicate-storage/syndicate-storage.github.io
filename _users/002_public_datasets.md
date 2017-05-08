@@ -21,7 +21,7 @@ Large-scale DNA sequence datasets are publicly accessible.
 
 ### Accessing a datatset using `syndicatefs`
 
-To mount the `iMicrobe` dataset to a local path `/mnt/imicrobe` using the 
+To mount the `iMicrobe` dataset in a local path `/mnt/imicrobe` using the 
 `syndicatefs`,
 ```
 syndicatefs -u ANONYMOUS -v imicrobe -g imicrobe_anonymous /mnt/imicrobe
