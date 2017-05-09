@@ -13,4 +13,4 @@ Syndicate is a general-purpose data delivery platform that harnesses a collectio
 There are multiple ways to use and contribute to Syndicate. This guide describes three:
  - **Users:** Mount and access existing Syndicate volumes.
  - **Administrators:** Create and manage Syndicate volumes.
- - **Developers:* Contribute drivers that connect Syndicate to external stores.
+ - **Developers:** Contribute drivers that connect Syndicate to external stores.
