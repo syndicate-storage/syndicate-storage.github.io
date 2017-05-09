@@ -3,12 +3,8 @@ layout: post
 title: Public Datasets
 ---
 
-Public Datasets
-===============
-
 Syndicate delivers scientific datasets efficiently. These datasets are easily 
 accessed in the same way as accessing local files.
-
 
 ## Datasets
 

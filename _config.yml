@@ -23,9 +23,9 @@ github:
   repo:           https://github.com/syndicate-storage/syndicate-storage.github.io
 
 collections:
-  users:
+  user:
     output: true
-  developers:
+  developer:
     output: true
-  administrators:
+  admin:
     output: true
