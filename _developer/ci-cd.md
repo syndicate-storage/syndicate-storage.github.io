@@ -5,7 +5,7 @@ title: A Syndicate CI/CD Strategy
 
 ### Syndicate Continuous Integration and Continuous Delivery Strategy
 
----
+
 Our software development strategy is based on concepts established under the [“Continuous Integration”](https://en.wikipedia.org/wiki/Continuous_integration) and [“Continuous Delivery”](https://en.wikipedia.org/wiki/Continuous_delivery) _(CI/CD)_ models.  This approach is based on the practice that developers integrate code into a shared repository as frequently as possible.  The regular and short integration cycles generally lead to improved quality of software and a significantly reduced time to deliver it.  Small and frequent changes enable us to quickly identify and make corrections or improvements.  And with automation, the process of rebuilding, deploying, testing, and analyzing can begin almost instantly.
 
 
@@ -28,7 +28,7 @@ We utilize a [build server running Jenkins](https://butler.opencloud.cs.arizona.
 
 <br>
 
-<div align="center"><img src="https://www.docker.com/sites/default/files/moby_48%402x.png" alt="DockerLogo" style="width: 70px;"/> + <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4kbEocBYvX-orDbMBUtTKk9pMJcbZ0A4ojPUoLqOglGPAJH9_gQ" alt="DockerLogo" style="width: 60px;"/></div>
+<div align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFB-QG_lQOWfqBV95HDak684RxOkjba1bjd58LjJ9A0WErr9OaA" alt="DockerLogo" style="width: 190px;"/></div>
 
 ## Docker and Ansible
 
@@ -55,6 +55,7 @@ A vital part of continuous integration comes from the developers ability to work
 <a href="https://www.youtube.com/watch?v=ktNPYyWsUak&t=2s">Watch the Syndicate CI/CD demonstration video</a>
 </div>
 <br>
+
 ---
 
 
