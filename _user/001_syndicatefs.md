@@ -26,7 +26,7 @@ apt-get install syndicate-core syndicatefs
 
 ## Run
 
-An example `syndicatefs` UG command:
+An example command is:
 
 ```
 syndicatefs -u $SYNDICATE_USER -v $SYNDICATE_VOLUME -g $SYNDICATE_GATEWAY -d3 $MOUNT_PATH
