@@ -23,6 +23,16 @@ To mount the `iMicrobe` dataset in a local path `/mnt/imicrobe` using the
 syndicatefs -u ANONYMOUS -v imicrobe -g imicrobe_anonymous /mnt/imicrobe
 ```
 
+### Accsesing a dataset using `Syndicate UG Tools`
+
+To list files in the `iMicrobe` dataset, 
+```
+syndicate-ls -u ANONYMOUS -v imicrobe -g imicrobe_anonymous /
+```
+
+Similarly, you can use `syndicate-cat`, `syndicate-get` and many more commands 
+to access content of the dataset. For more information, check [Syndicate UG Tools](/user/002_syndicaet_ug_tools).
+
 ### Accessing a dataset using a `Docker image`
 
 **[Docker](https://www.docker.com)** allows rapid deployment of software packages.
