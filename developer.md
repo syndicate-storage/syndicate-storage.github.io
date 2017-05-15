@@ -5,7 +5,8 @@ title: Developers Guide
 
 Learn how contribute to Syndicate, including writing drivers that connect Syndicate to new data sources, storage services, and visualization tools.
 
-# Overview
+Overview
+=======
 
 The "secret sauce" of Syndicate is its ability to be adapted to handle any
 application's storage semantics with minimal changes.  It does so by processing
