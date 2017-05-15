@@ -1,0 +1,31 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Syndicate Guides
+tagline:          'Syndicate Guides'
+description:      'Documentation for Users, Developers, and Administrators'
+url:              http://syndicate-storage.github.io
+baseurl:          /
+
+author:
+  name:           'syndicate'
+  url:            https://github.com/syndicate-storage
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/syndicate-storage/syndicate-storage.github.io
+
+collections:
+  user:
+    output: true
+  developer:
+    output: true
+  admin:
+    output: true

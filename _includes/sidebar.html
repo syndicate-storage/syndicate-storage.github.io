@@ -1,0 +1,66 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}">{{ site.title }}</a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign cur_page = site.baseurl | append:"install/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Install</a>
+ 
+      {% assign pages_list = site.user | sort:"url" %}
+      {% assign cur_page = site.baseurl | append:"user/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">User Guide</a>
+      <ul>
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "post" %}
+            <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+      {% assign pages_list = site.developer | sort:"url" %}
+      {% assign cur_page = site.baseurl | append:"developer/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Developer Guide</a>
+      <ul>
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "post" %}
+            <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+      {% assign pages_list = site.admin | sort:"url" %}
+      {% assign cur_page = site.baseurl | append:"admin/" %}
+      <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Admin Guide</a>
+      <ul>
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "post" %}
+            <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </ul>
+
+      <a class="sidebar-nav-item" href="https://github.com/syndicate-storage">GitHub</a>
+      <a class="sidebar-nav-item" href="https://butler.opencloud.cs.arizona.edu/jenkins">Download</a>
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
