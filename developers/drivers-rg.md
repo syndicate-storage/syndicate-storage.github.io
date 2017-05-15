@@ -51,64 +51,6 @@ Each `rg-driver` chassis process is long-lived--it will run until the
 code (in which case the `syndicate-rg` process stops them and re-starts them
 with the new code).
 
-## Driver methods
-
-Each driver method takes a `request`, a `driver_config`, and a `driver_secrets`
-argument.
-
-* `request` is a `SG_messages::Request` instance.  Fields within it can be
-  queried with methods in `syndicate.util.gateway`.
-
-* `driver_config` is a `dict` that contains the publicly-visible driver
-  configuration.  It is loaded from the driver's `config` file.
-
-* `driver_secrets` is a `dict` that contains private driver configuration.  It
-  is loaded from the driver's `secrets` file.
-
-In `read_chunk()`, `chunk_fd` is a file-like object.  The method must write its
-chunk data to this object.
-
-In `write_chunk()`, `serialize()`, and `deserialize()`, `chunk` is a byte buffer
-with the data.
-
-## A word on driver programming
-
-The driver programming model for replica gateways is multi-process.  `rg-driver`
-workers **do not share state** with one another, which means that
-concurrently-executing driver methods do not share state.  For example, a call to
-`read_chunk()` will run in a separate process from `write_chunk()`,
-since each `rg-driver` worker calls only one driver method.  This design was
-chosen specifically to (1) isolate the `syndicate-rg` process from driver bugs,
-and (2) allow `syndicate-rg` to start more `rg-driver` workers to handle higher
-load.
-
-This is acceptable because consistency is handled by user gateways.
-Each chunk is immutable, and there is
-no need for replica gateways to handle concurrent
-requests in any particular order (so there does not need to be any shared state
-between concurrent method invocations).
-
-However, if shared state is needed for some reason, it is up to the driver code
-to set up its own inter-process communication.  For example, the code running in
-`rg-driver` instances can communicate locally via shared files, shared named
-pipes, etc.  This is considered to be the exception rather than the rule,
-however, so you should think carefully about whether or not this is necessary in
-your driver design.
-
-## A word on serialization
-
-Chunks are serialized by the user gateways' drivers before being sent to replica
-gateways.  The serialization step in the user gateway pre-processes the chunk to
-make it suitable for transmission and caching (e.g. encrypting it, giving it a canonical
-encoding, compressing it, etc.).
-
-Explicitly handling serialization and deserialization is optional.  If user
-gateways do not do any special serialization, then the replica gateway does not
-need to do any special deserialization.  The `syndicate-rg` process will
-short-circuit requests to serialize and deserialize chunks if it detects that
-its driver code does not implement the relevant methods (i.e. it will not start
-`rg-driver serialize` or `rg-driver deserialize` workers).
-
 ## POST Format
 
 Replica gateways receive chunks in resposne to signed HTTP POST requests.  The
@@ -182,7 +124,7 @@ chunk from back-end storage and serialize it.  This is handled as follows:
 
 * **Load chunk.** When the `rg-driver` receives the `SG_messages::DriverRequest`
   from its parent `syndicate-rg` process, it invokes the `read_chunk()` method
-  in the driver code with the request structure to actually fetch the driver.
+  in the driver code with the request structure to actually fetch the data.
   The `rg-driver` process then replies the chunk data to `syndicate-rg`.
 
 * **Serialize chunk.** Once the `syndicate-rg` process has the chunk, it passes
@@ -257,3 +199,6 @@ details.  If there were any `syndicate-rg`-related errors, such as a `rg-drver`
 crash or an invalid request, then `syndicate-rg` replies with an HTTP 40x or 50x
 error.
 
+## Example Implementation 
+
+Please see the `disk` driver [here](https://github.com/syndicate-storage/syndicate-core/tree/master/python/syndicate/rg/drivers/disk).
