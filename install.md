@@ -16,9 +16,7 @@ sudo apt-get install apt-transport-https ca-certificates
 Add the syndicate APT key and repo to the system's APT source list:
 
 ```
-curl -o /tmp/butler_opencloud_cs_arizona_edu_pub.gpg https://butler.opencloud.cs.arizona.edu/butler_opencloud_cs_arizona_edu_pub.gpg 
-sudo apt-key add /tmp/butler_opencloud_cs_arizona_edu_pub.gpg
-
+wget -qO - https://butler.opencloud.cs.arizona.edu/butler_opencloud_cs_arizona_edu_pub.gpg | sudo apt-key add -
 echo "deb https://butler.opencloud.cs.arizona.edu/repos/release/syndicate syndicate main" | sudo tee /etc/apt/sources.list.d/butler.list
 ```
 
@@ -38,4 +36,3 @@ Packages available:
  - `syndicate-ug-tools` - User Gateway Tools
  - `syndicate-automount` - Automount (certificate management) Service
  - `syndicatefs` - Syndicate FUSE driver
-
