@@ -42,8 +42,25 @@ Syndicate uses 3 kinds of gateways to get data into and out of volumes:
 
 ## Content Delivery Network
 
-Used to accellerate data access to volumes
+Used to accelerate data access to volumes, in the OpenCloud deployment
+scenario.  By placing a CDN node on your network (as a part of the OpenCloud
+project), data is kept closer to where it is used, which improves data access
+latency and overall bandwidth.
 
 ## Administrative tools
 
-Used to manage users and volumes
+### `syndicate` command
+
+The primary administrative tool is named `syndicate`, and is used to manage
+the Metadata Service (MS), users, volumes, and gateways.
+
+It has many sub-commands:
+
+ - `setup`, which creates an administrative config directory structure
+ - User management: `create_user`, `delete_user`, `list_users`
+ - Volume management: `create_volume`, `delete_volume`, `list_volumes`
+ - Gateway management: `create_gateway`, `update_gateway`, `delete_gateway`,
+   `list_gateways`
+
+
+
