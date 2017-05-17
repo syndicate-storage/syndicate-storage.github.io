@@ -36,6 +36,8 @@ You can find source code from [https://github.com/syndicate-storage/syndicate-no
 
 You can find the examples from [https://github.com/syndicate-storage/syndicate-node-ug-tools](https://github.com/syndicate-storage/syndicate-node-ug-tools).
 
+Original code written in `C` is at [https://github.com/syndicate-storage/syndicate-ug-tools](https://github.com/syndicate-storage/syndicate-ug-tools).
+
 Also, you can install the examples for test by:
 ```
 npm install syndicate-storage-ug-tools
