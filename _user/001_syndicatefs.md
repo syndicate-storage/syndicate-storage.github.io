@@ -34,7 +34,7 @@ syndicatefs -u $SYNDICATE_USER -v $SYNDICATE_VOLUME -g $SYNDICATE_GATEWAY -d3 $M
 
 Once the volume is successfully mounted, the volume's data will be available at `$MOUNT_PATH`.
 
-## Syndicatefs Options
+### Options
 
 * `-f`: run in foreground
 * `-d$DEBUG_LEVEL`: set a debug level. For example, `-d3` will set the debug
