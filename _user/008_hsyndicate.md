@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syndicate Hadoop FileSystem Driver
+title: Hadoop Integration
 ---
 
 {% include toc.html %}
 
 `H-Syndicate` allows users to access datasets on Syndicate Volumes from `Hadoop`. 
 Plugged into `Hadoop FileSystem Abstraction`, Hadoop users can access Syndicate 
-Volumes in the same way as `Hadoop Native Filesystem (HDFS)`.
+Volumes in the same way as working with `Hadoop Native Filesystem (HDFS)`.
 
 ## Prerequisites
 
@@ -18,10 +18,10 @@ and `session_key` for each mount.
 
 ## Path (URI)
 
-To call `H-Syndicate` for access, give `URI scheme` for `H-Syndicate`. We recommend 
-`hsyn://` but this can differ from environments by policy. `Hadoop` will redirect 
-accesses to `H-Syndicate` when requested file path (URI) has the corresponding 
-scheme.
+To access `H-Syndicate`, give `URI scheme` of `H-Syndicate` when passing a path. 
+We recommend `hsyn://` but this can differ from environments by policy. `Hadoop` 
+will redirect accesses to `H-Syndicate` when requested file path (URI) has the 
+corresponding scheme.
 
 `H-Syndicate`'s path is defined as following:
 ```
@@ -56,7 +56,7 @@ You can use different paths for the database file. But we recommend place them
 under your home directory for security.
 
 To use the database, the database path should be given. One way is defining 
-`hadoop.security.credential.provider.path` configuration parameter.
+`hadoop.security.credential.provider.path` configuration parameter from command-line.
 ```
 -D hadoop.security.credential.provider.path=jceks://hdfs/user/<hadoop_user>/.syndicate/hsyndicate.jceks
 ```
