@@ -6,17 +6,17 @@ title: Syndicate Node.JS Binding
 {% include toc.html %}
 
 `syndicate-node` package offers `Node.JS` binding for Syndicate core library. It 
-allows you to develop apps rapidly using `Javascript`. Plenty of library supports 
-is also big advantage.
+allows you to develop apps rapidly using `Javascript`. Plenty of library support 
+is also a big advantage.
 
 ## Prerequisites
 
 You must first [Install Syndicate](/install).
 
-If you do not have a user certificate and a gateway certificate, follow [Create
-a User](#) and [Create a gateway](#) guide.
+If you do not have a user certificate and a gateway certificate, follow 
+[Create a User](#) and [Create a gateway](#) guide.
 
-If you do not have Node.JS and NPM installed, follow [https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
+If you do not have `Node.JS` and `NPM` installed, follow [https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions).
 
 ## Installation
 
@@ -31,14 +31,13 @@ You can find source code from [https://github.com/syndicate-storage/syndicate-no
 
 ## Code Examples
 
-`Syndicate Node UG Tools` package offers example codes that re-implement 
-`Syndicate UG Tools` using `Node.JS` and `syndicate-node`.
+`Syndicate Node UG Tools` re-implements [`Syndicate UG Tools`](https://github.com/syndicate-storage/syndicate-node-ug-tools) in 
+`Node.JS` using `syndicate-node`.
 
-You can find the examples from [https://github.com/syndicate-storage/syndicate-node-ug-tools](https://github.com/syndicate-storage/syndicate-node-ug-tools).
+* Code examples : [https://github.com/syndicate-storage/syndicate-ug-tools](https://github.com/syndicate-storage/syndicate-ug-tools)
+* Corresponding code in C :  [https://github.com/syndicate-storage/syndicate-node-ug-tools](https://github.com/syndicate-storage/syndicate-node-ug-tools)
 
-Original code written in `C` is at [https://github.com/syndicate-storage/syndicate-ug-tools](https://github.com/syndicate-storage/syndicate-ug-tools).
-
-Also, you can install the examples for test by:
+To test `Syndicate Node UG Tools`, you can easily install the tool to your system using `NPM`.
 ```
 npm install syndicate-storage-ug-tools
 ```
