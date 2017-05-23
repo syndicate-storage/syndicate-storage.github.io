@@ -12,18 +12,19 @@ Large-scale DNA sequence datasets are publicly accessible.
 
 | **Dataset** | **Syndicate Volume** | **Access** | **Description** |
 | -------------| ----------- | ----------- | ----------- |
-| `iMicrobe`   | `imicrobe`  | `imicrobe_anonymous` Anonymous User Gateway | Microbial datasets hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://imicrobe.us/](http://imicrobe.us/) |
-| `iVirus`     | `ivirus`    | `ivirus_anonymous` Anonymous User Gateway | Viral datasets hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://ivirus.us/](http://ivirus.us/) |
+| `iMicrobe`   | `imicrobe`  | `imicrobe_anonymous` Anonymous User Gateway | Metagenomic samples for microbial ecology hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://imicrobe.us/](http://imicrobe.us/) |
+| `iVirus`     | `ivirus`    | `ivirus_anonymous` Anonymous User Gateway | Metagenomic samples for viral ecology hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://ivirus.us/](http://ivirus.us/) |
+| `Panzea`     | `panzea`    | `panzea_anonymous` Anonymuos User Gateway | Maize genomes hosted by **[Cyverse](http://www.cyverse.org)**. For more details, access [http://www.panzea.org/](http://www.panzea.org/) |
 
-### Accessing a datatset using `syndicatefs`
+### Accessing a dataset using `syndicatefs`
 
-To mount the `iMicrobe` dataset in a local path `/mnt/imicrobe` using the 
+To mount the `iMicrobe` dataset in a local path `/mnt/imicrobe` usiDng the 
 `syndicatefs`,
 ```
 syndicatefs -u ANONYMOUS -v imicrobe -g imicrobe_anonymous /mnt/imicrobe
 ```
 
-### Accsesing a dataset using `Syndicate UG Tools`
+### Accessing a dataset using `Syndicate UG Tools`
 
 To list files in the `iMicrobe` dataset, 
 ```
@@ -45,6 +46,7 @@ where analysis software and a dataset are prepared.
 | -------------| ----------- | ----------- |
 | `iMicrobe`   | `syndicatestorage/imicrobe-anaconda`  | Ubuntu 14.04, Anaconda 4.3.1, R 3.3.2 |
 | `iVirus`     | `syndicatestorage/ivirus-anaconda`    | Ubuntu 14.04, Anaconda 4.3.1, R 3.3.2 |
+| `Panzea`     | `syndicatestorage/panzea-anaconda`    | Ubuntu 14.04, Anaconda 4.3.1, R 3.3.2 |
 
 To access, 
 ```
