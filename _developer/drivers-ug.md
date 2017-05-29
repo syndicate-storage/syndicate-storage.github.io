@@ -3,9 +3,6 @@ layout: post
 title: User Gateway Drivers
 ---
 
-User Gateway Drivers
-====================
-
 {% include toc.html %}
 
 User gateways implement HTTP clients.
