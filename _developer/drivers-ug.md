@@ -59,7 +59,7 @@ User gateways address manifests and blocks as follows.
 A manifest URL has the format:
 
 ```
-    http://${gateway_host}:${gateway_port}/DATA/${volume_id}/${fs_path}.${file_id_hex}.${version}/manifest.${timestamp_sec}.${timestamp_nsec}
+http://${gateway_host}:${gateway_port}/DATA/${volume_id}/${fs_path}.${file_id_hex}.${version}/manifest.${timestamp_sec}.${timestamp_nsec}
 ```
 
 Where:
@@ -77,7 +77,7 @@ Where:
 A block URL has the format:
 
 ```
-    http://${gateway_host}:${gateway_port}/DATA/${volume_id}/${fs_path}.${file_id_hex}.${version}/${block_id}.${block_version}
+http://${gateway_host}:${gateway_port}/DATA/${volume_id}/${fs_path}.${file_id_hex}.${version}/${block_id}.${block_version}
 ```
 
 Where:
