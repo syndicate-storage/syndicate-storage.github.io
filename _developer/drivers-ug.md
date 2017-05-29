@@ -6,6 +6,8 @@ title: User Gateway Drivers
 User Gateway Drivers
 ====================
 
+{% include toc.html %}
+
 User gateways implement HTTP clients.
 When an application reads data, the user gateway issues an HTTP GET to one or
 more gateways to fetch the relevant chunks.  When an application writes data,
@@ -121,5 +123,4 @@ URL, which the driver code can access via the methods in the
 The method must return a URL on success, or `None` on error.  If the
 method returns `None`, then the user gateway's read operation fails.
 
-{% include toc.html %}
 
