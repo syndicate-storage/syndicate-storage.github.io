@@ -1,4 +1,4 @@
-# Syndicate documentation on [syndicate-storage.org](https://syndicate-storage.org)
+# Syndicate Documentation on [http://syndicate-storage.org](http://syndicate-storage.org)
 
 This documentation uses [GitHub Pages](https://pages.github.com), specifically the [Jekyll Integration](https://help.github.com/articles/using-jekyll-with-pages/), which can be deployed using [Bundler](http://bundler.io/).
 
