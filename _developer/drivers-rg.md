@@ -130,18 +130,10 @@ chunk from back-end storage and serialize it.  This is handled as follows:
   requested, and forwards it to a `rg-driver` worker running with the `read`
   setting.
 
-<<<<<<< HEAD:developers/drivers-rg.md
 * **Load chunk.** When the `rg-driver` receives the `SG_messages::DriverRequest`
   from its parent `syndicate-rg` process, it invokes the `read_chunk()` method
   in the driver code with the request structure to actually fetch the data.
   The `rg-driver` process then replies the chunk data to `syndicate-rg`.
-=======
-* **Load chunk.** When the `rg-driver` receives the
-  `SG_messages::DriverRequest` from its parent `syndicate-rg` process, it
-  invokes the `read_chunk()` method in the driver code with the request
-  structure to actually fetch the driver.  The `rg-driver` process then replies
-  the chunk data to `syndicate-rg`.
->>>>>>> d611305b2dfa7adf64abfc151c50b401fd57ea2f:_developer/drivers-rg.md
 
 * **Serialize chunk.** Once the `syndicate-rg` process has the chunk, it passes
   it to an `rg-driver` process running with the `serialize` setting.  If the
