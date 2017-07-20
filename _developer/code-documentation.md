@@ -3,7 +3,6 @@ layout: post
 title: Documenting Syndicate with Doxygen
 ---
 
-# Documenting Syndicate with Doxygen
 ---
 
 Doxygen is a tool for writing software reference documentation (a.k.a. a documentation generator). Because the documentation is written within code, it is relatively easy to keep up to date.  For this reason, the Syndicate project utilizes Doxygen to generate code and tool related documentation in the form of a web page located at [https://butler.opencloud.cs.arizona.edu/docs/](https://butler.opencloud.cs.arizona.edu/docs/) and man pages that are distributed with the Syndicate installation packages.  Utilizing the [syndicate-docs](https://github.com/syndicate-storage/syndicate-docs) repo, Syndicate documentation is auto-generated via Syndicate's [Jenkins](https://butler.opencloud.cs.arizona.edu/jenkins) server.  Information on how to install and configure Doxygen from scratch is located at the end of this document.
