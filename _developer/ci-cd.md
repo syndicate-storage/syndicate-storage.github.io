@@ -3,6 +3,8 @@ layout: post
 title: A Syndicate CI/CD Strategy
 ---
 
+{% include toc.html %}
+
 ### Syndicate Continuous Integration and Continuous Delivery Strategy
 
 
