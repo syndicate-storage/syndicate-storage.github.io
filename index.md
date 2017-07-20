@@ -12,6 +12,6 @@ There are multiple ways to use and contribute to Syndicate. This guide describes
  - **Administrators:** Create and manage Syndicate volumes.
  - **Developers:** Contribute drivers that connect Syndicate to external stores.
  
-These three roles are sometimes conflated (e.g., users can administer their own volumes, admins can also operate the service), but they represent four different stakeholders, and so this guide is organized on that basis. 
+These three roles are sometimes conflated (e.g., users can administer their own volumes), but they represent three different stakeholders, and so this guide is organized on that basis. 
 
-Note that there is also a fourth role -- **Operators** can download the software, and then deploy and operate the Syndicate service on behalf of some community -- but this guide is not yet organized to call out operators as a distinct role.
+Note that there is also a fourth role/stakeholder: **Operators** can download the software, and then deploy and operate the Syndicate service on behalf of some community. This guide is not yet organized to call out operators as a distinct role.
