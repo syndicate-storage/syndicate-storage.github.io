@@ -3,15 +3,17 @@ layout: post
 title: Documenting Syndicate with Doxygen
 ---
 
-#Documenting Syndicate with Doxygen
+{% include toc.html %}
+
+# Documenting Syndicate with Doxygen
 ---
 
 Doxygen is a tool for writing software reference documentation (a.k.a. a documentation generator). Because the documentation is written within code, it is relatively easy to keep up to date.  For this reason, the Syndicate project utilizes Doxygen to generate code and tool related documentation in the form of a web page located at [https://butler.opencloud.cs.arizona.edu/docs/](https://butler.opencloud.cs.arizona.edu/docs/) and man pages that are distributed with the Syndicate installation packages.  Utilizing the [syndicate-docs](https://github.com/syndicate-storage/syndicate-docs) repo, Syndicate documentation is auto-generated via Syndicate's [Jenkins](https://butler.opencloud.cs.arizona.edu/jenkins) server.  Information on how to install and configure Doxygen from scratch is located at the end of this document.
 
 
-##Code Documentation
+## Code Documentation
 
-###Comment Blocks
+### Comment Blocks
 
 Doxygen accepts multiple comment block styles (e.g. JavaDoc, C++, Qt, etc.).  For multi-line comment blocks, JavaDoc seems to be the most commonly used and suggested.
 
@@ -35,7 +37,7 @@ variable ///< ...text about variable
 Typically, developers choose to solely use these two styles for the sake of consistency.  Furthermore, comment blocks are often written in header files before the declaration it describes (with the same indentation level).
 
 ---
-######Other Supported comment block styles include...
+###### Other Supported comment block styles include...
 
 Psuedo C++ style
 
@@ -68,13 +70,13 @@ or Qt style
  */
 ```
 
-###Common Tags / Special Commands
+### Common Tags / Special Commands
 
 Tags or special commands define documentation instructions within a comment (or comment block) for Doxygen.  For consistency purposes, these should begin with the `@` symbol instead of using `\`. Below is a list of commonly used tags / special commands, see
 [https://www.stack.nl/~dimitri/doxygen/manual/commands.html](https://www.stack.nl/~dimitri/doxygen/manual/commands.html) for more examples.
 
 
-####@brief
+#### @brief
 
 ```
 /**
@@ -86,7 +88,7 @@ Tags or special commands define documentation instructions within a comment (or 
  */
 ```
 
-####@param
+#### @param
 Indicates a parameter description as follows.  The in and out designation is specified with `[in]`, `[out]`, and `[in,out]` for both.
 
 ```
@@ -100,13 +102,13 @@ Indicates a parameter description as follows.  The in and out designation is spe
 void memcpy(void *dest, const void *src, size_t n);
 ```
 
-####@tparam
+#### @tparam
 Similar to @param, except use for a class or function template parameter.
 
-####@return
+#### @return
 Describes the return value
 
-####@retval
+#### @retval
 Similar to @return but useful when multiple specific values are expected
 
 ```
@@ -120,7 +122,7 @@ Similar to @return but useful when multiple specific values are expected
  */
 ```
 
-####@class
+#### @class
 
 `@class <name> [<header-file>] [<header-name>]`
 
@@ -139,10 +141,10 @@ class Test
 };
 ```
 
-####@note
+#### @note
 Describes an additional note.  This has the affect of indenting the paragraph.
 
-####@ref
+#### @ref
 
 Creates a reference to a named section, subsection, page or anchor.
 
@@ -150,7 +152,7 @@ Creates a reference to a named section, subsection, page or anchor.
 * @ref syndicate-cat  //take note this is a generated "page", not a file (i.e. not a cpp/h file) or function.
 ```
 
-####@see
+#### @see
 Cross reference to related code documentation (a.k.a. "see also" or `@sa`)
 
 ```
@@ -164,7 +166,7 @@ Cross reference to related code documentation (a.k.a. "see also" or `@sa`)
 vector<double> cos(vector<double> const & angles);
 ```
 
-####@relatesalso
+#### @relatesalso
 This is good for operator functions, since they are related to another function.
 
 ```
@@ -176,7 +178,7 @@ This is good for operator functions, since they are related to another function.
 ImageF operator+(ImageF const & lhs, ImageF const & rhs);
 ```
 
-####@throws
+#### @throws
 
 Same as @throw or @exception, but use @throws to be consistent
 
@@ -189,7 +191,7 @@ Same as @throw or @exception, but use @throws to be consistent
 void writeImage(std::string const & fileName);
 ```
 
-####@overload
+#### @overload
 Generate standard text for an overloaded function.  Also see example output [http://www.stack.nl/~dimitri/doxygen/manual/examples/overload/html/class_test.html](http://www.stack.nl/~dimitri/doxygen/manual/examples/overload/html/class_test.html)  Take note that the \a located in the description below tells Doxygen to italicize the word after it.
 
 ```
@@ -220,7 +222,7 @@ void Overload_Test::drawRect(const Rect &r) {}
 
 ```
 
-####@copydetails
+#### @copydetails
 
 Copy the details section from another comment block.  This is useful when multiple comment blocks have identical comments.
 
@@ -228,7 +230,7 @@ Copy the details section from another comment block.  This is useful when multip
 @copydetails some_function_name_that_has_a_comment_block()
 ```
 
-####@image
+#### @image
 @image \<format> \<file> ["caption"] [\<sizeindication>=\<size>]
 
 Inserts an image into the documentation. This command is format specific, so if you want to insert an image for more than one format you'll have to repeat this command for each format.
@@ -240,7 +242,7 @@ Inserts an image into the documentation. This command is format specific, so if 
  */
 ```
 
-####@section
+#### @section
 
 Define your own section
 
@@ -251,7 +253,7 @@ Define your own section
 
 ###File and page related commands
 
-####@file
+#### @file
 
 Indicates that a comment block contains documentation for a source or header file with name <name>.
 
@@ -261,11 +263,11 @@ Indicates that a comment block contains documentation for a source or header fil
  */
 ```
 
-####@author
+#### @author
 
 Specify the authors name.  Usually accompanied with @file and @date 
 
-####@date
+#### @date
 
 Provide the date that the file was created  Usually accompanied with @file and @author.
 
@@ -273,12 +275,12 @@ Provide the date that the file was created  Usually accompanied with @file and @
  @date 9 Mar 2016
 ```
 
-####@page
+#### @page
 
 Indicates that a comment block contains a piece of documentation that is not directly related to one specific class, file or member.  This has the effect of creating a "related page" in the web page produced by Doxygen and creating a *__man page__* that is not specific to a file.  For example, `@page syndicate-cat` will create a page associated with _syndicate-cat_ instead of the syndicate-cat.cpp/h files.
 
 ---
-###Example Function
+### Example Function
 
 ```
 /**
@@ -294,7 +296,7 @@ lsst::afw::image::Image<double> loadImage(std::string const & fileName);
 ```
  
 
-###Inline comments
+### Inline comments
 
 ```
 /**
@@ -309,7 +311,7 @@ enum class myshapeenum
 }
 ```
 
-###Example cpp file (using _@file_)
+### Example cpp file (using _@file_)
 
 ```
 /**
@@ -323,7 +325,7 @@ enum class myshapeenum
  */
 ```
 
-###Example header file (using _@file_)
+### Example header file (using _@file_)
 
 ```
 // file documentation
@@ -341,7 +343,7 @@ enum class myshapeenum
  */
 ```
 
-###Example man page (using _@page_)
+### Example man page (using _@page_)
 
 The comment block below should follow the _header_ comment block shown above, since the header file will contain documentation for both the header file (using _@file_) and the associated man page.<br>
 Man page comment blocks use the _@section_ command to define man page sections, since typically man pages use ALL-CAPS to indicate section names (e.g. SYNOPSIS, DESCRIPTION, EXAMPLES, AUTHOR...)
@@ -381,12 +383,12 @@ Man page comment blocks use the _@section_ command to define man page sections, 
  */
 ```
 
-##Groups
+## Groups
 
 Doxygen allows for the ability to organize or group things together such as files, namespaces, classes, functions, variables, enums, typedefs, and defines, but also other groups.  This is useful, for example, if a set of classes were all related to a specific capability.  The group will be categorized as modules or submodules in the webpage that Doxygen produces. For a more thorough explanation, see [http://www.stack.nl/~dimitri/doxygen/manual/grouping.html](http://www.stack.nl/~dimitri/doxygen/manual/grouping.html)
 
 ---
-##Installing from Scratch
+## Installing from Scratch
 
 ```
 apt-get install doxygen graphviz
@@ -412,7 +414,7 @@ There are two approaches for configuring Doxygen for our environment.
 
 2) Run doxygen once and provide all of the source directories as input.  This is more simple and works well for our environment since the documentation for each repo will be recreated each time the Jenkins detects a change in any of the repos. 
 
-##Running Doxygen / Generating Documentation
+## Running Doxygen / Generating Documentation
 
 If running from the syndicate-docs repo via the Makefile, simply run ... <br>
 
