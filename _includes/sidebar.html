@@ -2,24 +2,24 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ site.baseurl }}">{{ site.title }}</a>
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-      {% assign cur_page = site.baseurl | append:"install/" %}
+      {% assign cur_page = site.baseurl | append:"/install/" %}
       <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Install</a>
  
       {% assign pages_list = site.user | sort:"url" %}
-      {% assign cur_page = site.baseurl | append:"user/" %}
+      {% assign cur_page = site.baseurl | append:"/user/" %}
       <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">User Guide</a>
       <ul>
       {% for node in pages_list %}
@@ -32,7 +32,7 @@
       </ul>
 
       {% assign pages_list = site.developer | sort:"url" %}
-      {% assign cur_page = site.baseurl | append:"developer/" %}
+      {% assign cur_page = site.baseurl | append:"/developer/" %}
       <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Developer Guide</a>
       <ul>
       {% for node in pages_list %}
@@ -45,7 +45,7 @@
       </ul>
 
       {% assign pages_list = site.admin | sort:"url" %}
-      {% assign cur_page = site.baseurl | append:"admin/" %}
+      {% assign cur_page = site.baseurl | append:"/admin/" %}
       <a class="sidebar-nav-item{% if page.url == cur_page %} active{% endif %}" href="{{ cur_page }}">Admin Guide</a>
       <ul>
       {% for node in pages_list %}
