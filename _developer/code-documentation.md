@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Syndicate CI/CD Strategy
+title: Documenting Syndicate with Doxygen
 ---
 
 # Documenting Syndicate with Doxygen
