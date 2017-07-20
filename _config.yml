@@ -10,7 +10,7 @@ title:            Syndicate Guides
 tagline:          'Syndicate Guides'
 description:      'Documentation for Users, Developers, and Administrators'
 url:              http://syndicate-storage.github.io
-baseurl:          /
+baseurl:          '/'
 
 author:
   name:           'syndicate'
