@@ -23,9 +23,10 @@ Setting up the Syndicate Tool is an one-time task per a user and a machine.
 syndicate -d --trust_public_key setup $SYNDICATE_USER $USER_CERT_PATH $MS_HOST
 ```
 
-`$SYNDICATE_USER`: the user name on the MS
-`$USER_CERT_PATH`: certificate file path
-`$MS_HOST`: URL of the MS
+Parameters:
+- `$SYNDICATE_USER`: the user name on the MS
+- `$USER_CERT_PATH`: certificate file path
+- `$MS_HOST`: URL of the MS
 
 e.g.
 
