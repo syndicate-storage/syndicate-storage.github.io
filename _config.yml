@@ -23,6 +23,8 @@ github:
   repo:           https://github.com/syndicate-storage/syndicate-storage.github.io
 
 collections:
+  overview:
+    output: true
   user:
     output: true
   developer:

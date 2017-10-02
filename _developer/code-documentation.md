@@ -31,7 +31,7 @@ or using an inline comment
 variable ///< ...text about variable
 ```
 
-Typically, developers choose to solely use these two styles for the sake of consistency.  Furthermore, comment blocks are often written in header files before the declaration it describes (with the same indentation level).
+Typically, developers choose to solely use these two styles for the sake of consistency.  Furthermore, comment blocks are often written in header files before the declaration it describes (with the same indentation level).  But since much of the original syndicate code and functionality was described/documented in the cpp files, and most of the structures are defined in the cpp files rather than the header files, in many cases it may make more sense to primarily add Doxygen documentation in the cpp files.
 
 ---
 ###### Other Supported comment block styles include...
@@ -84,6 +84,9 @@ Tags or special commands define documentation instructions within a comment (or 
  * Notice the blank line between indicates the end of the brief description.
  */
 ```
+
+#### @details
+A detailed description.  Usually defined after the *_@brief_* section.  Using @details is optional, it can be skipped entirely or a detailed description can be designated by not specifying a special command, as seen in the example above.
 
 #### @param
 Indicates a parameter description as follows.  The in and out designation is specified with `[in]`, `[out]`, and `[in,out]` for both.
@@ -138,7 +141,11 @@ class Test
 };
 ```
 
-#### @note
+#### @attention
+
+Describes a message that needs attention.
+
+####@note
 Describes an additional note.  This has the affect of indenting the paragraph.
 
 #### @ref
@@ -187,6 +194,10 @@ Same as @throw or @exception, but use @throws to be consistent
  */
 void writeImage(std::string const & fileName);
 ```
+
+#### @todo
+
+Describe a section that needs to be finished.  The description is also added to a TODO list that can be referenced separately.
 
 #### @overload
 Generate standard text for an overloaded function.  Also see example output [http://www.stack.nl/~dimitri/doxygen/manual/examples/overload/html/class_test.html](http://www.stack.nl/~dimitri/doxygen/manual/examples/overload/html/class_test.html)  Take note that the \a located in the description below tells Doxygen to italicize the word after it.
@@ -252,7 +263,7 @@ Define your own section
 
 #### @file
 
-Indicates that a comment block contains documentation for a source or header file with name <name>.
+Indicates that a comment block contains documentation for a source or header file with name <name>.  Duplicate file names should also include a unique path, for example, 'libsyndicate/opts.h'
 
 ```
 /**
