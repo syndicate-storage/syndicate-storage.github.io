@@ -3,7 +3,7 @@ layout: post
 title: Users Guide
 ---
 
-These guides explain how to get started with using Syndicate.  They explain how to install, configure, use command-line tools, or how to access volumes in your environment.  They also include how to utilize Syndicate with Jupyter notebook or even a Hadoop cluster.
+These documents explain how to get started with using Syndicate.  They explain how to install, configure, use command-line tools, or how to access volumes in your environment.  They also include how to utilize Syndicate with Jupyter notebook or even a Hadoop cluster.
 
 <br>
 

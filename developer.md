@@ -3,7 +3,7 @@ layout: post
 title: Developers Guide
 ---
 
-Learn about the development and development process of Syndicate.  Our continuous integration/delivery strategy is designed to make development simplified and efficient so any programmer can immediately begin contributing and testing Syndicate. These documents will also guide you through the process of creating drivers, storage services, and visualization tools.
+Learn about the development process of Syndicate and how to contribute.  Our continuous integration/delivery strategy is designed to make development simplified and efficient so any programmer can immediately begin contributing and testing Syndicate. These documents will also guide you through the process of creating drivers, storage services, and visualization tools.
 
 <br>
 
