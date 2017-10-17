@@ -28,7 +28,7 @@ apt-get install syndicate-ug-tools
 
 `Syndicate UG Tools` offers following commands:
 
-| **Command** <br>*_(click to view Man Pages)_* | **Corresponding UNIX command** | **Description** |
+| **Command**<br>*(click to view Man Pages)* | **Corresponding UNIX command** | **Description** |
 | -------------| ----------- | ----------- |
 | [syndicate-cat](https://butler.opencloud.cs.arizona.edu/docs/syndicate-cat.html) | `cat`  | Show file content |
 | [syndicate-ls](https://butler.opencloud.cs.arizona.edu/docs/syndicate-ls.html) | `ls`   | List directory content |
