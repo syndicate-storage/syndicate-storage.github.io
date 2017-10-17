@@ -7,7 +7,7 @@ These documents explain how to get started with using Syndicate.  They explain h
 
 <br>
 
-[Installing Syndicate](https://syndicate-storage.github.io/install/)
+[Installing Syndicate](https://syndicate-storage.github.io/install/)<br>
 [Using syndicatefs](https://syndicate-storage.github.io/user/001_syndicatefs/)<br>
 [Syndicate UG Tools](https://syndicate-storage.github.io/user/002_syndicate_ug_tools/)<br>
 [Mounting Public Datasets](https://syndicate-storage.github.io/user/008_public_datasets/)<br>
