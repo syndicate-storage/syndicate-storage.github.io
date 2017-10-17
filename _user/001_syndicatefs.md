@@ -14,7 +14,7 @@ filesystem.
 You must first [Install Syndicate](/install).
 
 If you do not have a user certificate and a gateway certificate, follow [Create
-a User](#) and [Create a gateway](#) guide.
+a User](https://syndicate-storage.github.io/admin/users/) and [Create a gateway](#) guide.
 
 
 ## Installation
