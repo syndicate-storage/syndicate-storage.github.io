@@ -76,11 +76,11 @@ The list of datasets should look similar to the output shown below.
 
 ### How to mount and unmount a dataset
 
-Mounting or unmounting a dataset is similar to using the standard *_mount_* and *_umount_* commands, except in this case *_mount_* and *_umount_* are options to the *_sdm_* command.
+Mounting or unmounting a dataset is similar to using the standard *mount* and *umount* commands, except in this case *mount* and *umount* are options to the *sdm* command.
 
 ###### Mounting a dataset
 
-This example shows how to mount the *_iMicrobe_* dataset to a directory such as *_/tmp/imicrobe_*
+This example shows how to mount the *iMicrobe* dataset to a directory such as */tmp/imicrobe*
 
 ```
 >mkdir /tmp/imicrobe
