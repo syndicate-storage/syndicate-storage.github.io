@@ -3,8 +3,6 @@ layout: post
 title: Managing Users
 ---
 
-{% include toc.html %}
-
 Syndicate users are managed with the `syndicate` tool.
 
 ## Creating users

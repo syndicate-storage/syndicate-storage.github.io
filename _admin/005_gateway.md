@@ -3,8 +3,6 @@ layout: post
 title: Managing Gateways
 ---
 
-{% include toc.html %}
-
 Syndicate gateways are also managed with the `syndicate` tool.
 
 ## Gateways

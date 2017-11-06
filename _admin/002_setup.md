@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Syndicate Tool
+title: Syndicate Admin Tool
 ---
-
-{% include toc.html %}
 
 `syndicate` is an administration tool.  It is used to manage the Metadata Service (MS), users, volumes, and gateways.
 
-It has many sub-commands:
+It has the following options:
 
  - `setup`, which creates an administrative config directory structure
  - User management: `create_user`, `delete_user`, `list_users`
@@ -19,7 +17,7 @@ It has many sub-commands:
 
 You must first [Install Syndicate](/install).
 
-You will also need an admin user certificate or a user certificate.  Please read about [Certificates](/certificates) for more information.
+You will also need an admin user certificate or a standard user certificate.  Please read about [Certificates](/certificates) for more information.
 
 ## Setup
 
