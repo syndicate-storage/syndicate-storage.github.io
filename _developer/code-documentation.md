@@ -404,8 +404,7 @@ Doxygen is compatible with Python, but there are differences is in how the comme
 #
 # The detailed description
 ```
-Alternatively, installing *doxypypy* enables Doxygen to use docstrings (i.e. `""" ... """`) and slightly more human-readable formatting.  For example, with *doxypypy* the docstring can be located in the function, and looks like the following.
-
+Alternatively, installing *doxypypy* enables Doxygen to use docstrings (i.e. `""" ... """`) and slightly more human-readable formatting.  For example, with *doxypypy* the docstring can be located in the function, and looks like the following.  For Syndicate, doxypypy is already configured, therefore the docstrings format is compatible.
 ```
 def myfunction(arg1, arg2, kwarg='whatever.'):
     """
@@ -434,7 +433,7 @@ def myfunction(arg1, arg2, kwarg='whatever.'):
       		...
     """
 ```
-######Possible Issues
+###### Possible Issues
 
 Utilizing doxypypy is an attractive option for python, however it does create the adverse affect of sometimes creating Doxygen-based documentation of sections that are not intented to be documented.  For example, having the copyright section located in a docstring at the beginning of a file would likely tell Doxygen to identify the file with a description that includes the copyright information.  To get around these kind of issues, the problematic section simply needs to use single `#` instead of a docstring.  Or start the file with a docstring describing the file prior to the copyright information.
 
