@@ -395,8 +395,76 @@ Man page comment blocks use the _@section_ command to define man page sections, 
 
 Doxygen allows for the ability to organize or group things together such as files, namespaces, classes, functions, variables, enums, typedefs, and defines, but also other groups.  This is useful, for example, if a set of classes were all related to a specific capability.  The group will be categorized as modules or submodules in the webpage that Doxygen produces. For a more thorough explanation, see [http://www.stack.nl/~dimitri/doxygen/manual/grouping.html](http://www.stack.nl/~dimitri/doxygen/manual/grouping.html)
 
+## Using Doxygen to Document Python
+
+Doxygen is compatible with Python, but there are differences is in how the comment blocks are formatted.  In Python, Doxygen natively uses the `#` symbol to detect comment blocks.  The first line of the comment block should begin with `##`.
+
+```
+## @brief The brief description
+#
+# The detailed description
+```
+Alternatively, installing *doxypypy* enables Doxygen to use docstrings (i.e. `""" ... """`) and slightly more human-readable formatting.  For example, with *doxypypy* the docstring can be located in the function, and looks like the following.
+
+```
+def myfunction(arg1, arg2, kwarg='whatever.'):
+    """
+    Does nothing more than demonstrate syntax.
+
+    This is an example of how a Pythonic human-readable docstring can get parsed by doxypypy and marked up with Doxygen commands as a regular input filter to Doxygen.
+
+    Args:
+        arg1:   A positional argument.
+        arg2:   Another positional argument.
+
+    Kwargs:
+        kwarg:  A keyword argument.
+
+    Returns:
+        A string holding the result.
+
+    Raises:
+        ZeroDivisionError, AssertionError, & ValueError.
+
+    Examples:
+        >>> myfunction(2, 3)
+        '5 - 0, whatever.'
+        >>> myfunction(5, 0, 'oops.')
+        Traceback (most recent call last):
+      		...
+    """
+```
+######Possible Issues
+
+Utilizing doxypypy is an attractive option for python, however it does create the adverse affect of sometimes creating Doxygen-based documentation of sections that are not intented to be documented.  For example, having the copyright section located in a docstring at the beginning of a file would likely tell Doxygen to identify the file with a description that includes the copyright information.  To get around these kind of issues, the problematic section simply needs to use single `#` instead of a docstring.  Or start the file with a docstring describing the file prior to the copyright information.
+
+#### Optionally install and configure doxypypy
+
+Install doxypypy with pip (assuming all dependencies have already been installed).
+
+```
+sudo -H pip install doxypypy
+```
+Configure the Doxyfile.cfg by setting the *FILTER_PATTERNS* option.
+
+```
+FILTER_PATTERNS        = *.py=./py_filter
+```
+Create a py_filter script with the following contents in the directory containing the Doxyfile.cfg file.
+
+```
+#!/bin/bash
+doxypypy -a -c $1
+```
+
+If doxypypy is to be utilized from a Jenkins fakeroot environment, you will likely need to use "easy_install" instead of "pip".
+
+#### Manual testing of doxypypy
+
+Try using the `doxypypy -a -c FILE.py` command to view the the results of FILE.py after doxypypy converts the comment blocks to a standard Doxygen style.
+
 ---
-## Installing from Scratch
+## Installing Doxygen from Scratch
 
 ```
 apt-get install doxygen graphviz
